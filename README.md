@@ -17,22 +17,14 @@ Para instalar este sistema, sigue estos pasos:
 
 1. **Clona el repositorio:**
    ```bash
-   git clone https://github.com/osva1do/RhinoLabs.git
+   git clone https://github.com/osva1do/RinoLabs-client.git
    ```
 2. **Instala las dependencias:**
    ```bash
-   cd api
    npm i
-   //repetir con todas las rutas
    ```
-3. **Ejecuta el servidor:**
+3. **Inicia el cliente:**
    ```bash
-   cd api
    npm run dev
    ```
-4. **Inicia el cliente:**
-   ```bash
-   cd web-client
-   npm run dev
-   ```
-5. \*\*Abre el navergador e ingresa a http://localhost:5173 para ingresar a la pagina
+4. \*\*Abre el navergador e ingresa a http://localhost:5173 para ingresar a la pagina

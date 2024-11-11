@@ -3,6 +3,7 @@ import "./App.css";
 import Landing from "./pages/Home/Landing";
 import Register from "./pages/auth/register/register";
 import Login from "./pages/auth/login/login";
+import Menu from "./pages/menu/menu"
 import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" Component={Landing} />
         <Route path="/registrarse" Component={Register} />
         <Route path="/iniciar-sesion" Component={Login} />
+        <Route path="/inventario" Component={Menu} />
       </Routes>
     </Router>
   );

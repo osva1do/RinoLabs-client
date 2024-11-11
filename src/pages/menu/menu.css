@@ -1,0 +1,227 @@
+/* menu-container {
+  text-align: center;
+  margin: 20px;
+  padding: 0 10%; /* Padding para móviles */
+
+.recuadro {
+  width: 100%; /* Ancho completo de la interfaz */
+  height: 80px; /* Alto de 20 píxeles */
+  background-color: rgb(60, 60, 60); /* Color gris */
+  margin-bottom: 20px; /* Espacio abajo del recuadro */
+}
+
+.barra-lateral {
+  width: 10cm; /* Ancho de la barra lateral */
+  height: calc(100% - 80px); /* Alto completo menos el recuadro */
+  background-color: rgb(80, 80, 80); /* Color de la barra lateral */
+  position: absolute; /* Posicionarla en el contenedor */
+  top: 80px; /* Debajo del recuadro */
+  left: 0; /* A la izquierda */
+}
+
+.menu-imagen {
+  width: 50px; /* Ajusta el ancho a 300 píxeles */
+  height: auto; /* Mantiene la proporción de la imagen */
+  top: 10px; /* Ajusta la posición vertical */
+  left: 40px; /* Ajusta la posición horizontal */
+  position: absolute;
+}
+
+.menu-title {
+  color: rgb(255, 255, 255);
+  font-size: 2rem; /* Tamaño 5 */
+  position: absolute; /* Para posicionar encima del recuadro */
+  top: 20px; /* Ajusta la posición vertical según necesites */
+  left: 90px; /* Ajusta la posición horizontal según necesites */
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative; /* Permite ajustar posición individualmente */
+}
+
+.btn.azul {
+  background-color: blue;
+  color: white;
+  top: 100px; /* Ajusta la posición vertical */
+  left: 0; /* Ajusta la posición horizontal */
+}
+
+.recuadro-desp {
+  width: 200px; /* Ajusta el ancho como desees */
+  height: 100px; /* Ajusta la altura como desees */
+  background-color: rgb(100, 100, 100); /* Color de fondo */
+  color: white; /* Color del texto */
+  position: absolute; /* Para posicionarlo de forma absoluta */
+  top: 2px; /* Debajo del título */
+  left: 10cm; /* A la derecha de la barra lateral */
+  padding: 10px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+
+.btn.rojo {
+  background-color: red;
+  color: white;
+  top: 100px; /* Ajusta la posición vertical según necesites */
+  left: 100px; /* Ajusta la posición horizontal según necesites */
+}
+
+.recuadro-1 {
+  width: 5cm; /* Ancho de 10 cm */
+  height: 7cm; /* Alto de 10 cm */
+  background-color: white; /* Fondo blanco */
+  color: black; /* Texto negro */
+  border: 1px solid black; /* Borde negro */
+  padding: 20px; /* Espaciado interno */
+  position: absolute; /* Para posicionar */
+  top: 80px; /* Debajo del recuadro existente */
+  left: 8px; /* A la izquierda */
+  margin: 10px; /* Añadir margen alrededor */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Contenedor del recuadro donde se encuentran las tablas */
+.recuadro-detalle {
+  position: absolute; /* Posicionar de forma absoluta */
+  top: 80px; /* Mismo top que el recuadro 1 */
+  left: 5.7cm; /* A la derecha del recuadro 1 */
+  width: calc(110% - 10cm - 20px); /* Ocupa el espacio restante menos márgenes */
+  background-color: rgba(200, 200, 200, 0.8); /* Fondo semi-transparente */
+  padding: 20px; /* Espaciado interno */
+  border: 1px solid black; /* Borde negro */
+  margin: 10px; /* Añadir margen alrededor */
+  border-radius: 10px; /* Bordes redondeados */
+  overflow-y: auto; /* Habilitar desplazamiento vertical si el contenido es grande */
+  height: auto; /* El alto se ajustará al contenido */
+}
+
+/* Ajustar las tablas dentro de los recuadros */
+table {
+  width: 100%; /* Ocupa todo el ancho del recuadro */
+  border-collapse: collapse; /* Combina bordes de las celdas */
+  margin-top: 20px; /* Espacio arriba de la tabla */
+}
+
+/* Añadir altura automática para las filas, en función de los registros */
+tbody {
+  height: auto; /* Ajusta la altura de tbody según el número de filas */
+}
+
+/* Estilos para las celdas */
+th, td {
+  border: 1px solid black; /* Borde de las celdas */
+  padding: 10px; /* Espaciado interno de las celdas */
+  text-align: left; /* Alinear texto a la izquierda */
+}
+
+th {
+  background-color: #f2f2f2; /* Fondo para los encabezados */
+}
+
+.recuadro-detalle {
+  overflow-y: auto; /* Permite desplazamiento cuando sea necesario */
+  max-height: 80vh; /* Maxima altura, para no ocupar toda la pantalla */
+}
+
+.recuadro-detalle.reactivos {
+  background-color: lightblue; /* Color específico para reactivos */
+}
+
+.recuadro-detalle.herramientas {
+  background-color: lightgreen; /* Color específico para herramientas */
+}
+
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-container button {
+  margin: 5px 0;
+  width: 150px; /* Ancho fijo para los botones */
+}
+
+.modal {
+  position: fixed; /* Posición fija en la pantalla */
+  z-index: 1000; /* Para que esté encima de otros elementos */
+  left: 0;
+  top: 0;
+  width: 100%; /* Ocupa todo el ancho */
+  height: 100%; /* Ocupa toda la altura */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  display: flex; /* Flex para centrar */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+}
+
+.modal-content {
+  background-color: white; /* Fondo blanco para la ventana */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  position: relative; /* Para el botón de cerrar */
+}
+
+.close {
+  position: absolute; /* Posición absoluta dentro del modal */
+  top: 10px; /* Espacio desde la parte superior */
+  right: 10px; /* Espacio desde la derecha */
+  cursor: pointer; /* Cambiar cursor al pasar sobre */
+  font-size: 24px; /* Tamaño del icono de cerrar */
+}
+
+
+input, select {
+  margin: 10px 0; /* Espaciado entre elementos */
+  padding: 8px; /* Espaciado interno */
+  width: 100%; /* Ancho completo */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.alert-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  z-index: 9999;
+}
+
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .menu-title {
+      font-size: 3rem; /* Reducir tamaño en pantallas más pequeñas */
+  }
+
+  .btn {
+      font-size: 0.9rem; /* Reducir tamaño de fuente de los botones */
+      padding: 8px 16px; /* Ajustar padding para móviles */
+  }
+
+  .btn.azul, .btn.rojo {
+      margin: 5px; /* Reducir márgenes en móviles */
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-title {
+      font-size: 2.5rem; /* Aún más pequeño en pantallas muy pequeñas */
+  }
+
+  .btn {
+      width: 100%; /* Botones ocupan el ancho completo en móviles */
+      margin: 5px 0; /* Espaciado vertical entre botones */
+  }
+}

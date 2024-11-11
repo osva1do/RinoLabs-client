@@ -17,14 +17,6 @@
   position: relative;
 }
 
-.shadow-button {
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translate(-50%);
-  z-index: 2;
-}
-
 #loop {
   display: flex;
   position: absolute;

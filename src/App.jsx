@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Landing from "./pages/Home/Landing";
 import Register from "./pages/auth/register/register";
 import Login from "./pages/auth/login/login";
 import ProtectedRoute from "./components/ProtectedRoute";
-import Home from "./pages/Home/home";
-import "./App.css";
 
 function App() {
   return (
@@ -17,9 +17,9 @@ function App() {
             </ProtectedRoute>
           }
         /> RUTA PROTEGIDA PARA EL DASHBOARD DE ADMIN */}
-        <Route path="/" element={<Home />} />
-        <Route path="/registrarse" element={<Register />} />
-        <Route path="/iniciar-sesion" element={<Login />} />
+        <Route path="/" Component={Landing} />
+        <Route path="/registrarse" Component={Register} />
+        <Route path="/iniciar-sesion" Component={Login} />
       </Routes>
     </Router>
   );

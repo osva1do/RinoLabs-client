@@ -6,7 +6,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Icon from "../../../components/icon/icon";
 import Input from "../../../components/input/input";
-import ShadowButton from "../../../components/Shadow Button/shadow_button"
+import ShadowButton from "../../../components/shadow-button/shadow-button";
 import "../style.css";
 import { useState } from "react";
 import axios from "axios";

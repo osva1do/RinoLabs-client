@@ -1,20 +1,21 @@
 @font-face {
-  font-family: "Gotham";
-  src: url(./assets/fonts/Gotham-Book.otf);
+  font-family: 'Gotham';
+  src: url(/fonts/Gotham-Book.otf);
 }
 
 :root {
   --bg-color: #e0e0e0;
-  --primary-color: #9f2241;
+  --primary-color: #9f2241; 
   --secondary-color: #69a8a4;
-  --section-color: #c0c0c0;
+  --section-color: #C0C0C0;
   --text-color: #4b4b4b;
   --text-color-secondary: #fff;
   --hover-color: #7fc7c3;
 }
 
 * {
-  padding: 0;
+  font-family: 'Gotham';
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }

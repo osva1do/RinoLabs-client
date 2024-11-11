@@ -10,7 +10,7 @@ import {
   faCircleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
 import Input from "../../../components/input/input";
-import ShadowButton from "../../../components/Shadow Button/shadow_button"
+import ShadowButton from "../../../components/shadow-button/shadow-button";
 import "../style.css";
 
 // Expresiones regulares para validación

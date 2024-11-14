@@ -287,7 +287,6 @@ function Register() {
               </p>
             )}
           </div>
-
           <ShadowButton text="Regístrate" type="submit" />
         </form>
 

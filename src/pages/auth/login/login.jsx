@@ -22,7 +22,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:10001/login",
+        "https://rinolabs-api.onrender.com/login",
         { username, password },
         {
           withCredentials: true,

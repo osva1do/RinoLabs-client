@@ -13,18 +13,18 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* <Route
-          path="/home"
+        <Route
+          path="/admin"
           element={
             <ProtectedRoute>
-              <Admin />
+              <Dashboard />
             </ProtectedRoute>
           }
-        /> RUTA PROTEGIDA PARA EL DASHBOARD DE ADMIN */}
+        /> RUTA PROTEGIDA PARA EL DASHBOARD DE ADMIN
         <Route path="/" Component={Landing} />
         <Route path="/registrarse" Component={Register} />
         <Route path="/iniciar-sesion" Component={Login} />
-        <Route path="/admin" element={<Dashboard />}>
+        <Route path="/home" element={<Dashboard />}>
           <Route path="resumen" element={<Summary />} />
           <Route path="inventario" element={<Inventory />} />
           <Route path="overview" element={<Overview />} />

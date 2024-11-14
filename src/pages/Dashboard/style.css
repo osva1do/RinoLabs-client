@@ -1,0 +1,55 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0.3rem 2rem;
+}
+
+.logo-container{
+  flex: 1;
+}
+
+.logo-container .logo{
+  width: 80px;
+  height: auto;
+}
+
+.dashboard-header a{
+  color: var(--primary-color);
+}
+
+.dashboard-navigation{
+  flex: 2;
+}
+
+.dashboard-navigation nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.dashboard-header .buttons{
+  flex: 1;
+  display: flex;
+  justify-content: end;
+  align-items: baseline;
+  gap: 1.3rem;
+}
+
+.header-profile{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.content-outlet {
+  flex-grow: 1;
+  overflow-y: auto;
+}

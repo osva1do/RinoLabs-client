@@ -1,0 +1,18 @@
+.inventory-container {
+  width: 100%;
+  display: flex;
+}
+
+.inventory-content {
+  width: 100%;
+  display: block;
+}
+
+.inventory-card {
+  width: 30rem;
+  height: auto;
+  border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow:  5px 5px 10px #9b9b9b,
+               -5px -5px 10px #ffffff;
+}

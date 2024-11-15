@@ -2,9 +2,9 @@ import "./style.css";
 
 const ShadowButton = (props) => {
   return (
-    <a className="shadow-button" href={props.href}>
+    <button className="shadow-button" type={props.type}>
       <span className="button-content">{props.text}</span>
-    </a>
+    </button>
   );
 };
 export default ShadowButton;

@@ -8,7 +8,7 @@ const ProtectedRoute = ({ children }) => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const response = await axios.get("http://localhost:10001/authenticated", {
+        const response = await axios.get("https://rinolabs-api.onrender.com/authenticated", {
           withCredentials: true,
         });
 

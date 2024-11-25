@@ -1,18 +1,303 @@
+
+/* Contenedor General */
+
 .inventory-container {
-  width: 100%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+
+
+/* Titulo */
+
+.header {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.inventory-content {
-  width: 100%;
+h1 {
+  color: #333;
+  padding-left: 15px;
+}
+
+
+
+/* Buscador */
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.InputContainer {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  padding-left: 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+  width: 350px;
+  margin-left: 720px;
+}
+
+.input {
+  width: 350px;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 0.9em;
+  caret-color: rgb(255, 81, 0);
+}
+
+.button {
+  position: relative;
+  border: none;
+  background-color: white;
+  color: #212121;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1px;
+  font-weight: 600;
+  gap: 10px;
+  border-radius: 10px;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.labelforsearch {
+  cursor: text;
+  padding: 0px 12px;
+}
+
+
+
+/* Barra de secciones */
+
+.section-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.section-options {
+  display: flex;
+  gap: 20px;
+}
+
+.section-options button {
+  background-color: transparent;
+  border: none;
+  color: var(--primary-color);
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.section-options button.active {
+  color: var(--primary-color);
+  font-weight: bold;
+  transform: scale(1.05);
+}
+
+.section-options button:hover {
+  color: #9b1335;
+  background-color: rgba(175, 76, 101, 0.1);
+}
+
+
+
+/* Botón de registro */
+
+.register-button {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.register-button:hover {
+  background-color: var(--hover-color);
+}
+
+
+
+/* Modal */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asegúrate de que el modal esté por encima de otros elementos */
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #333; /* Color del texto del encabezado */
+}
+
+label {
   display: block;
+  margin-bottom: 10px;
+  color: #555; /* Color del texto de las etiquetas */
 }
 
-.inventory-card {
-  width: 30rem;
-  height: auto;
-  border-radius: 30px;
-  background: #e0e0e0;
-  box-shadow:  5px 5px 10px #9b9b9b,
-               -5px -5px 10px #ffffff;
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+  border-color: #007bff; /* Color del borde al enfocar */
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.modal-buttons button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.modal-buttons button:first-child {
+  background-color: #28a745; /* Color del botón de Registrar */
+  color: white;
+}
+
+.modal-buttons button:first-child:hover {
+  background-color: #218838; /* Color al pasar el mouse sobre el botón de Registrar */
+}
+
+.modal-buttons button:last-child {
+  background-color: #dc3545; /* Color del botón de Cancelar */
+  color: white;
+}
+
+.modal-buttons button:last-child:hover {
+  background-color: #c82333; /* Color al pasar el mouse sobre el botón de Cancelar */
+}
+
+
+
+/* Tabla de registros */
+
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.inventory-table th,
+.inventory-table td {
+  border: 1px solid #ccc;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.inventory-table th {
+  background-color: #c7c7c7;
+  font-weight: bold;
+}
+
+.inventory-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.inventory-table tr:hover {
+  background-color: #f0f0f0;
+}
+
+.edit-button {
+  background-color: #4ca0af;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 7px;
+}
+
+.edit-button:hover {
+  background-color: #40838f;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 7px;
+}
+
+.delete-button:hover {
+  background-color: #c62828;
 }
